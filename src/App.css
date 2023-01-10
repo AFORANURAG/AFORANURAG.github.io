@@ -27,6 +27,17 @@ html {
   scroll-padding-top: 75px;
 }
 
+#Skill{
+  color: white;
+  font-size: 20px;
+}
+#Home{
+  font-size: 20px;
+  color: white;
+  /* /* position: relative;
+  top: 10px; * */
+
+}
 body {
   font-weight: 400;
   overflow-x: hidden;
@@ -89,6 +100,22 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+}
+#Contact{
+  color: white;
+}
+.navbar-link{
+position: relative;
+top: 10px;
+font-size: 20px;
+color: white;
+}
+#Project{
+  color: white;
+  font-size:20px ;
+  position: relative;
+  /* margin-left: 10px; */
+  /* margin-right: 20px; */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -243,7 +270,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(100, 54, 124, 0.5) -5.91%, rgba(200, 47, 109, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -389,7 +416,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #AA367C -5.91%, yellow 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -417,18 +444,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
+  width: 100%;
   margin-bottom: 24px;
+  height: 500px;
+}
+.projectimage{
+  height: 500px;
+
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background-image: linear-gradient(to bottom right, red, yellow)
+;  /* background-image: linear-gradient(-45.21deg, white -5.91%, orange 111.58%); */
   opacity: 0.85;
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transform: scale3d(1.5);
+  transition: 0.4s ease-in;
+
 }
 .proj-imgbx:hover::before {
+ 
   height: 100%;
 }
 .proj-txtx {
@@ -468,7 +505,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #AA367C -5.91%,black 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -615,4 +652,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+@media (min-width:767px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+  /* #Home{
+    margin-left: 27px;
+    margin-bottom: 10px;
+  }
+  #Project{
+    margi
+  }#Contact{
+    margin-left: 20px;
+  } */
+ 
+}
+@media (max-width:567px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+
+  .proj-imgbx {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 24px;
+    height: 500px;
+    margin-left: -15%;
+  }
+ 
 }

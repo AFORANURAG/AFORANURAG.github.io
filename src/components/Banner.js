@@ -47,7 +47,7 @@ export const Banner = () => {
   }
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="home" style={{marginTop:"-150px"}} >
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -65,8 +65,10 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={"https://i.ibb.co/By7f9C0/Anuragupadhyay-image.jpg"} style={{borderRadius:"20%"}} alt="Header Img"/>
-                </div>}
+                  <img src={"https://i.ibb.co/KF65FcH/Anurag-Upadhyay-logo.png"} style={{borderRadius:"20%"}} alt="Header Img"/>
+              
+
+                  </div>}
             </TrackVisibility>
           </Col>
         </Row>

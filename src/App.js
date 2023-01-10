@@ -7,17 +7,29 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ChakraProvider } from '@chakra-ui/react'
+ import { Route,Routes } from 'react-router-dom';
+import Githubstats from './components/Githubstats';
+
+
 
 function App() {
   return (
+    <ChakraProvider>
+
     <div className="App">
-      <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <NavBar />
+    <Banner />
+    <Skills />
+    <Projects />
+    <Githubstats/>
+    <Contact />
+    <Footer />
+  </div>
+
+
+</ChakraProvider>
+  
   );
 }
 

@@ -6,93 +6,150 @@ import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export const Projects = () => {
 
   const projects = [
+    
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "See Full Project",
+      description: "eauty Bomb (Clone of Nykaa)",
       imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      href:"https://beauttybomb.netlify.app/",
+      github:"https://github.com/BmDevelopers001/attractive-bikes-9922"
+    }
+   
   ];
 
+  const project1 = [
+    
+    {
+      title: "See Full Project",
+      description: "Lyst.com (Clone of Lyst ,A London based Ecommerce Webstore)",
+      imgUrl: projImg2,
+      href:"https://serene-bublanina-1e30b8.netlify.app/",
+      github:"https://github.com/AFORANURAG/volatile-wilderness-1112"
+
+    }
+   
+  ];
+
+
+  const project2 = [
+    
+    {
+      title: "See Whole Project",
+      description: "Hey Fit India (Clone of GeFit)",
+      imgUrl: projImg3,
+      href:"https://aforanurag.github.io/amazing-shape-3534/",
+      github:"https://github.com/AFORANURAG/amazing-shape-3534"
+
+    }
+   
+  ];
+
+
   return (
-    <section className="project" id="project">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
+    <Element name="Project" >
+    
+    <section  className="project" id="project">
+    <Container>
+      <Row>
+        <Col size={20}>
+          <TrackVisibility>
+            {({ isVisible }) =>
+            <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+              <h2>Projects</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <Tab.Container  id="projects-tabs" defaultActiveKey="first">
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav.Item>
+                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+                <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Tab.Pane eventKey="first">
+                    <Row>
+                      {
+                        projects.map((project, index) => {
+                          return (
+                            <ProjectCard
+                              key={index}
+                              {...project}
+                              href={project.href}
+github={project.github}
+                              />
+                          )
+                        })
+                      }
+                    </Row>
+                  </Tab.Pane>
+                 
+
+                  <Tab.Pane eventKey={"second"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Row>
+                  {
+                    project1.map((project, index) => {
+                      return (
+                        <ProjectCard
+                          key={index}
+                          {...project}
+                          href={project.href}
+                          github={project.github}
+
+                          />
+                      )
+                    })
+                  }
+                </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+
+
+                  <Tab.Pane eventKey={"third"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Row>
+                  {
+                    project2.map((project, index) => {
+                      return (
+                        <ProjectCard
+                          key={index}
+                          {...project}
+                          href={project.href}
+                          github={project.github}
+
+                          />
+                      )
+                    })
+                  }
+                </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
-    </section>
+                </Tab.Content>
+              </Tab.Container>
+            </div>}
+          </TrackVisibility>
+        </Col>
+      </Row>
+    </Container>
+    <img className="background-image-right" src={colorSharp2}></img>
+  </section>
+    
+    </Element>
+   
   )
 }
+// {
+//   title: "Business Startup",
+//   description: "Design & Development",
+//   imgUrl: projImg2,
+// },
+// {
+//   title: "Business Startup",
+//   description: "Design & Development",
+//   imgUrl: projImg3,
+// },
