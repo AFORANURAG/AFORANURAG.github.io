@@ -30,9 +30,10 @@ import {
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
+
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Home', 'Projects', 'Skills',"Contact Me","My Blogs","Resume"];
+const Links = ['Home', 'Projects', 'Skills',"Contact Me","My Blogs"];
 
 const NavLink = ({ children }) => (
   <Link
@@ -56,6 +57,29 @@ export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+ 
+  const handleClick = async () => {
+    setIsDownloading(true);
+
+    try {
+      const response = await fetch(".../public/Anurag_Upadhyay_Resume.pdf");
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'Anurag_Upadhyay_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -74,7 +98,17 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
-
+  const capitalizer=(string)=>{
+    let something=string.charAt(0).toLowerCase()
+  let string1=something
+    for(let i=1;i<string.length;i++){
+string1+=string[i]
+  }
+   return string1
+    
+  }
+  const answer=capitalizer("Anurag")
+  console.log(answer)
   return (
     <>
     <Router>
@@ -91,15 +125,20 @@ export const NavBar = () => {
           <Box width={"13%"} marginTop={"20px"} color={"white"}>
           <img width={"20px"} src="https://iili.io/H7Fl0pp.jpg" alt="" />
           </Box>
-          <HStack
-            as={'nav'}
+          <HStack className={"hello"}
+            as={'navbar'}
             spacing={4}
             display={{ base: 'none', md: 'flex' }}>
             {Links.map((link) => (
-              <NavLink key={link} href={link}  activeClass="active" to={link} spy={true} smooth={true} offset={50} duration={500}>{link}</NavLink>
+              <NavLink as={link} key={link} href={link}  className={`nav-link`}>{link}</NavLink>
 
             ))}
+           
+            <button disabled={isDownloading} onClick={handleClick} >
+            <NavLink key={"73892472"}  className={"nav-link resume"} >{isDownloading ? 'Downloading...' : 'Download Resume'}</NavLink>  
             
+          </button>
+
             </HStack>
 
             </HStack>
@@ -137,7 +176,7 @@ export const NavBar = () => {
         <Box pb={4} display={{ md: 'none' }}>
           <Stack as={'nav'} spacing={4}>
             {Links.map((link) => (
-              <NavLink key={link}  activeClass="active" to={link} spy={true} smooth={true} offset={50} duration={500} >{link}</NavLink>
+              <NavLink key={link}  className={`nav-link ${capitalizer(link)} }`} activeClass="active" to={link} spy={true} smooth={true} offset={50} duration={500} >{link}</NavLink>
             ))}
           </Stack>
         

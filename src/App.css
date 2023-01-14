@@ -270,7 +270,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(100, 54, 124, 0.5) -5.91%, rgba(200, 47, 109, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(100, 54, 124, 0.1) -5.91%, rgba(200, 47, 109, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -505,8 +505,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%,black 111.58%);
+  background: linear-gradient(90.21deg, brown -5.91%,black 111.58%);
   padding: 60px 0 200px 0;
+}
+
+.contactsbottom:hover{
+cursor: pointer;
 }
 .contact img {
   width: 92%;

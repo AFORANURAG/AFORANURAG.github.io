@@ -1,5 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
+import { IndividualProject } from "./IndividualProject";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
@@ -80,7 +80,7 @@ export const Projects = () => {
                       {
                         projects.map((project, index) => {
                           return (
-                            <ProjectCard
+                            <IndividualProject
                               key={index}
                               {...project}
                               href={project.href}
@@ -98,7 +98,7 @@ github={project.github}
                   {
                     project1.map((project, index) => {
                       return (
-                        <ProjectCard
+                        <IndividualProject
                           key={index}
                           {...project}
                           href={project.href}
@@ -117,7 +117,7 @@ github={project.github}
                   {
                     project2.map((project, index) => {
                       return (
-                        <ProjectCard
+                        <IndividualProject
                           key={index}
                           {...project}
                           href={project.href}

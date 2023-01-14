@@ -19,7 +19,7 @@ export default function Githubstats() {
     
     <GitHubCalendar style={{marginLeft:"13%"}} username="aforanurag" />
 <img width={"80%"} style={{marginTop:"70px",width:"80%",marginLeft:"9%"}} src="http://github-readme-streak-stats.herokuapp.com?user=AFORANURAG&theme=dark&background=000000" alt="" />
-<img width={"80%"} style={{marginTop:"70px",width:"80%",marginLeft:"9%"}} src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=radical" alt="" />
+<img width={"80%"} style={{marginTop:"70px",width:"80%",marginLeft:"9%"}} src="https://github-readme-stats.vercel.app/api?username=AFORANURAG&show_icons=true&theme=radical" alt="" />
 
 
 
