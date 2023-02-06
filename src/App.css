@@ -18,6 +18,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -259,6 +261,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+/******************** About me Css **************88*/
+.classofaboutme{
+
+width: 83%;
+border: 1px solid black;
+height: 230px;
+margin-top: 50px;
+}
+.aboutme{
+  background-image: url("./assets/img/pexels-pixabay-36717.jpg");
+}
+.infogrid{
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows: repeat(1,1fr);
+}
+.aboutmeinfo{
+  border: 1px solid black;
+height: max-content;
+color: black;
+text-align: center;
+margin-top: 50px;
+width: 60%;
+}
+
+.masaischoolstats{
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+row-gap: 10px;
+column-gap: 20px;
+}
+.innerdiv{
+  border: 1px solid black;
+  color: black;
+}
+/*  about me section*/
 
 /************ Banner Css ************/
 .banner {
@@ -334,7 +375,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background-image: url('./assets/img/pexels-pixabay-36717.jpg');
+  background-image: url('./assets/img/pexels-alex-andrews-816608.jpg');
 }
 .skill-bx {
   background: #151515;

@@ -9,9 +9,58 @@ import {Container} from "react-bootstrap"
 
 export default function Aboutme() {
   return (
-    <Container  style={{width:"100%",border:"1px solid white",marginTop:"50px",marginBottom:"100px",height:"500px",textAlign:"center"}}>
+    <Container className="aboutme" style={{width:"100%",border:"1px solid white",marginTop:"50px",marginBottom:"100px",height:"1300px",textAlign:"center"}}>
     <h1>AboutMe</h1>
-<img style={{width:"10%"}} src="https://media1.giphy.com/media/i1JHRZSXO9LZZDHqii/giphy.gif?cid=ecf05e47rxgz6titdcddtv1en3qd4c13frsxlrfns0arvkg2&rid=giphy.gif&ct=g" alt="" />
-    </Container>
+<img style={{width:"20%",marginRight:"40%", marginLeft:"40%",marginTop:"30px", borderRadius:"13%"}} src="https://media1.giphy.com/media/i1JHRZSXO9LZZDHqii/giphy.gif?cid=ecf05e47rxgz6titdcddtv1en3qd4c13frsxlrfns0arvkg2&rid=giphy.gif&ct=g" alt="" />
+   
+<div className='infogrid'>
+    <div className = "aboutmeinfo">
+
+    Highly skilled Node.js developer with a passion for creating efficient and scalable backend solutions. Proficient  in developing
+    robust and secure web applications using Node.js, Express and other related technologies. Proven track record of delivering successful projects on time and within budget. Expertise in developing RESTful APIs and integrating with various databases, including MongoDB and SQL. Strong problem-solving and analytical skills, with the ability to quickly learn new technologies and programming languages. A team player with excellent communication skills,
+    able to collaborate with cross-functional teams and contribute to the development of high-quality software.
+
+    </div>
+
+<div className='classofaboutme'>
+<img src="https://i.imgur.com/fZMQdrP.jpg" style={{height:"100% "}} alt="" />
+
+</div>
+
+
+</div>
+
+<h1 style={{color:"black",marginTop:"100px",fontSize:"30px"}}>My achivements</h1>
+<h2 style={{color:"black",marginTop:"50px",lineHeight:"25px",fontFamily:"sans-serif",fontSize:"20px"}}>My greatest achivement is completing the web developement course of masai school.It is a very intensive and immersive course   and it includes everything  , from coding to dsa to softskills training.Daily proctured evaluations and construct week projects.  </h2>
+
+<div className="masaischoolstats">
+<div className="innerdiv">
+1200+ hrs 
+<p> of coding
+
+</p>
+</div>
+
+<div className="innerdiv">
+5+ 
+<p>collaborative projects and Full Stack Projects.</p>
+</div>
+<div className="innerdiv">
+Participated in student senate and leadership.
+<p>Spent more than 100+ hours of softskill and corporate traning </p>
+</div>
+
+<div className="innerdiv">
+Data Structure and Algorithms. 
+<p>completed more than 300 questions including topics like recursion,dynamic programming ,linkedlist ,stacks and queues.</p>
+</div>
+<div className="innerdiv">Hackerank and Linkedin certified JavaScript developer.</div>
+<div className="innerdiv">
+1000+ github contribution till now. 
+</div>
+</div>
+
+</Container>
   )
 }
+
