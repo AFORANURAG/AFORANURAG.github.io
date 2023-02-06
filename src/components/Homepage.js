@@ -10,7 +10,7 @@ export const Homepage = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full Stack Web Developer",];
+  const toRotate = [ "A Full Stack Web Developer",];
   const period = 2000;
 
   useEffect(() => {
@@ -55,11 +55,13 @@ export const Homepage = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">I Trust You Are In Your Best Health</span>
-                <h1>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p style={{color:"white"}}>A Profiecient Full Stack Developer Passionate In Developing And Working on some of the coolest Project. Looking forwards to work in a supportive and collaborative environment </p>
-                  <button onClick={() => console.log('connect')}> Connect <ArrowRightCircle size={25} /></button>
+
+
               </div>}
             </TrackVisibility>
+
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>

@@ -1,101 +1,83 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
 
+import 'react-multi-carousel/lib/styles.css';
+import colorSharp from "../assets/img/color-sharp.png"
+import { Grid, GridItem } from '@chakra-ui/react'
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-    
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
 
   return (
-    <section className="skill" id="skills">
+    <section  className="skill" id="Skills">
         <div className="container">
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel  responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
+                        <Grid  templateColumns= {["repeat(1, 1fr)","repeat(3, 1fr)","repeat(6,1fr)"]} gap={6} wrap={"wrap"} direction={"row"}  >
+                            <GridItem className="item">
                                 <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"} alt="Image" />
                                 <h5>React</h5>
-                            </div>
-                            <div className="item">
+                            </GridItem>
+                            <GridItem className="item">
                                 <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"} alt="Image" />
                                 <h5>Nodejs</h5>
-                            </div>
-                            <div className="item">
-                                <img src={"https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_21a537a2f60ea582bd213cab0722cb1a/express-js.png"} alt="Image" />
+                            </GridItem>
+                            <GridItem className="item">
+                                <img src={"https://www.geekandjob.com/uploads/wiki/2e5b0058b2d38158b21439fe06e9b8fabe3cb139.png"} alt="Image" />
                                 <h5>Expressjs</h5>
-                            </div>
-                            <div className="item">
+                            </GridItem>
+                            <GridItem className="item">
                                 <img src={"https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.jpg"} alt="Image" />
                                 <h5>Mongo Db</h5>
-                            </div>
+                            </GridItem>
 
 
-                            <div className="item">
+                            <GridItem className="item">
                                 <img src={"https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png"} alt="Image" />
                                 <h5> MySQL</h5>
-                            </div>
-                            <div className="item">
+                            </GridItem>
+                            <GridItem className="item">
                                 <img src={"https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"} alt="Image" />
                                 <h5>Linux</h5>
-                            </div>
-                            <div className="item">
-                                <img src={"https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg"} alt="Image" />
-                                <h5>Redis</h5>
-                            </div>
-                            <div className="item">
-                                <img src={"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"} alt="Image" />
-                                <h5>JS</h5>
-                            </div>
+                            </GridItem>
+                          
+                           
+                        </Grid>
+<Grid  mt={20} templateColumns= {["repeat(1, 1fr)","repeat(3, 1fr)","repeat(6,1fr)"]}  gap={6} >
+<GridItem className="item">
+<img src={"https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg"} alt="Image" />
+<h5 >Redis</h5>
+</GridItem>
+<GridItem  className="item">
+<img src={"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"} alt="Image" />
+<h5>JS</h5>
+</GridItem>
 
 
-                            <div className="item">
-                            <img src={"https://cdn-icons-png.flaticon.com/512/143/143655.png"} alt="Image" />
-                            <h5>HTML</h5>
-                        </div>
-                        <div className="item">
-                        <img src={"https://img.freepik.com/free-icon/css_318-698167.jpg?w=2000"} alt="Image" />
-                        <h5>CSS</h5>
-                    </div>
-                    <div className="item">
-                    <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"} alt="Image" />
-                    <h5>Boostrap</h5>
-                </div>
+<GridItem className="item">
+<img src={"https://cdn-icons-png.flaticon.com/512/143/143655.png"} alt="Image" />
+<h5>HTML</h5>
+</GridItem>
+<GridItem className="item">
+<img src={"https://img.freepik.com/free-icon/css_318-698167.jpg?w=2000"} alt="Image" />
+<h5>CSS</h5>
+</GridItem>
+<GridItem className="item">
+<img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"} alt="Image" />
+<h5>Boostrap</h5>
+</GridItem>
 
-                <div className="item">
-                <img src={"https://images.opencollective.com/chakra-ui-pro/61bd1dd/logo/256.png"} alt="Image" />
-                <h5>Chakra UI</h5>
-            </div>
-                        </Carousel>
+<GridItem className="item">
+<img src={"https://images.opencollective.com/chakra-ui-pro/61bd1dd/logo/256.png"} alt="Image" />
+<h5>Chakra UI</h5>
+</GridItem>
+
+</Grid>
+
                     </div>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        
     </section>
   )
 }

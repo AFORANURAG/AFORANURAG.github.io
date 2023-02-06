@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import { Heading } from '@chakra-ui/react'
 import TrackVisibility from 'react-on-screen';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/Orion_github.svg';
-import Badge from 'react-bootstrap/Badge';
 export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
@@ -62,9 +59,9 @@ window.location.href="https://github.com/AFORANURAG"
 
   }
   return (
-    <section className="contact" id="connect">
+    <section  style={{marginTop:"100px"}} className="contact" id="ContactMe">
 
-    <Heading style={{marginLeft:"35%",marginTop:"-50px"}}>
+    <Heading style={{marginLeft:"35%",marginTop:"50px"}}>
   Contact Me
   </Heading>
       <Container>

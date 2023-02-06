@@ -8,9 +8,9 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ChakraProvider } from '@chakra-ui/react'
- import { Route,Routes } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
 import Githubstats from './components/Githubstats';
-
+import Aboutme from './components/Aboutme';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
     <div className="App">
     <NavBar />
     <Homepage />
+    <Aboutme/>
     <Skills />
     <Projects />
     <Githubstats/>

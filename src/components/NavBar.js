@@ -35,7 +35,23 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
 const Links = ['Home', 'Projects', 'Skills',"Contact Me","My Blogs"];
 
-const NavLink = ({ children }) => (
+const NavLink1 = ({ children }) => (
+  <Link
+    // px={2}
+   w={100 }
+    color={"white"}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('white', 'white'),
+    }}
+    href="/"
+    >
+    {children}
+  </Link>
+);
+const NavLink2 = ({ children }) => (
   <Link
     px={2}
     color={"white"}
@@ -45,6 +61,75 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       bg: useColorModeValue('white', 'white'),
     }}
+    href="#Projects"
+    >
+    {children}
+  </Link>
+);
+
+
+
+const NavLink3 = ({ children }) => (
+  <Link
+    px={2}
+    color={"white"}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('white', 'white'),
+    }}
+    href="#Skills"
+    >
+    {children}
+  </Link>
+);
+
+const NavLink5 = ({ children }) => (
+  <Link
+    px={2}
+    color={"white"}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('white', 'white'),
+    }}
+    href="#Skills"
+    >
+    {children}
+  </Link>
+);
+
+const NavLink4 = ({ children }) => (
+  <Link
+    px={2} 
+    color={"white"}
+    w={130}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('white', 'white'),
+    }}
+    href="#ContactMe"
+    >
+    {children}
+  </Link>
+);
+
+const NavLink = ({ children }) => (
+  <Link
+    px={2}
+    color={"white"}
+    py={1}
+    w={500}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('white', 'white'),
+    }}
+    href="#Resume"
     >
     {children}
   </Link>
@@ -61,18 +146,23 @@ export const NavBar = () => {
  
   const handleClick = async () => {
     setIsDownloading(true);
-
+console.log("downloading is started")
     try {
-      const response = await fetch(".../public/Anurag_Upadhyay_Resume.pdf");
+      const response = await fetch("Anurag_Upadhyay_Resume.pdf");
       const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
+      console.log(blob)
+      const url = window.URL.createObjectURL(blob);
+      console.log(url)
       const a = document.createElement('a');
       a.style.display = 'none';
       a.href = url;
+      a.target="_blank";
       a.download = 'Anurag_Upadhyay_Resume.pdf';
       document.body.appendChild(a);
       a.click();
-      URL.revokeObjectURL(url);
+      window.open("https://drive.google.com/file/d/1fdbfxIDhZaaLpkybY-pyVMJteHi0oHu4/view?usp=sharing","_blank")
+  
+      // URL.revokeObjectURL(url);
     } catch (err) {
       console.error(err);
     } finally {
@@ -89,7 +179,6 @@ export const NavBar = () => {
         setScrolled(false);
       }
     }
-
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
@@ -107,13 +196,12 @@ string1+=string[i]
    return string1
     
   }
-  const answer=capitalizer("Anurag")
-  console.log(answer)
+  // console.log(answer)
   return (
     <>
     <Router>
-    <Box color={"white"}  height={"70px"} bg={useColorModeValue('white.1000', 'white.100')}  backgroundColor={scrolled?"black":"white.1000"}   zIndex={1} top={0} style={{position:"sticky"}} px={4} marginTop={"20px"}>
-      <Flex h={16} alignItems={'center'} position="sticky" justifyContent={'space-between'} >
+    <Box color={"white"}  height={"100px"} bg={useColorModeValue('white.1000', 'white.100')}  backgroundColor={scrolled?"black":"white.1000"}   zIndex={1} top={0} style={{position:"sticky"}} px={4} marginTop={"20px"}>
+      <Flex h={"100px"}  alignContent={"center"} alignItems={'center'} justifyContent={'space-between'} >
         <IconButton
           size={'md'}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -122,20 +210,23 @@ string1+=string[i]
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={'center'}>
-          <Box width={"13%"} marginTop={"20px"} color={"white"}>
-          <img width={"20px"} src="https://iili.io/H7Fl0pp.jpg" alt="" />
+          <Box width={["25%","20%","10%"]} ml={["10%","10%","0px"]} marginTop={"12px"} mb={["15px"]}  color={"white"}>
+         
           </Box>
           <HStack className={"hello"}
-            as={'navbar'}
+            as={'nav'}
             spacing={4}
             display={{ base: 'none', md: 'flex' }}>
-            {Links.map((link) => (
-              <NavLink as={link} key={link} href={link}  className={`nav-link`}>{link}</NavLink>
-
-            ))}
+            <NavLink5>Home </NavLink5>
+<NavLink1>About Me </NavLink1>           
+<NavLink3>Skills </NavLink3>
+<NavLink2>Projects </NavLink2>
+<NavLink4>Contact Me</NavLink4>
+  
            
-            <button disabled={isDownloading} onClick={handleClick} >
-            <NavLink key={"73892472"}  className={"nav-link resume"} >{isDownloading ? 'Downloading...' : 'Download Resume'}</NavLink>  
+           
+            <button disabled={isDownloading} style={{width:"200px "}} onClick={handleClick} >
+            <NavLink key={"73892472"}   className={"nav-link resume"} >{isDownloading ? 'Downloading...' : 'Download Resume'}</NavLink>  
             
           </button>
 
@@ -153,19 +244,7 @@ string1+=string[i]
         <HashLink to='#connect'>
         </HashLink>
       </span> 
-          <MenuButton
-              as={Button}
-              rounded={'full'}
-              variant={'link'}
-              cursor={'pointer'}
-              minW={0}>
-              <Avatar
-                size={'sm'}
-                src={
-"https://i.ibb.co/KF65FcH/Anurag-Upadhyay-logo.png"
-                }
-              />
-            </MenuButton>
+        
          
           </Menu>
         </Flex>
@@ -173,7 +252,7 @@ string1+=string[i]
       </Flex>
 
       {isOpen ? (
-        <Box pb={4} display={{ md: 'none' }}>
+        <Box pb={4} display={{ md: 'none' }} bg={"blackAlpha.500"}  >
           <Stack as={'nav'} spacing={4}>
             {Links.map((link) => (
               <NavLink key={link}  className={`nav-link ${capitalizer(link)} }`} activeClass="active" to={link} spy={true} smooth={true} offset={50} duration={500} >{link}</NavLink>

@@ -15,13 +15,12 @@ export default function Githubstats() {
  
   
     return (
-    <div style={{position:"relative",top:"-50px"}}>
-    
-    <GitHubCalendar style={{marginLeft:"13%"}} username="aforanurag" />
-<img width={"80%"} style={{marginTop:"70px",width:"80%",marginLeft:"9%"}} src="http://github-readme-streak-stats.herokuapp.com?user=AFORANURAG&theme=dark&background=000000" alt="" />
-<img width={"80%"} style={{marginTop:"70px",width:"80%",marginLeft:"9%"}} src="https://github-readme-stats.vercel.app/api?username=AFORANURAG&show_icons=true&theme=radical" alt="" />
-
-
+    <div id='githubsection' style={{position:"relative",top:"100px",marginTop:"100px",background:"white"}}>
+    <h1 style={{textAlign:"center",marginBottom:"50px",color:"black",fontSize:"50px"}}> Github Stats</h1>
+    <GitHubCalendar  color={"darkgreen"} fontSize={24} style={{marginLeft:"25%", marginRight:"25%",color:"black",height:"200px"}} username="aforanurag" />
+<img style={{marginTop:"70px",width:"40%",marginLeft:"27%"}} src="http://github-readme-streak-stats.herokuapp.com?user=AFORANURAG&theme=dark&background=000000" alt="" />
+<img  style={{marginTop:"70px",width:"40%",marginLeft:"27%"}} src="https://github-readme-stats.vercel.app/api?username=AFORANURAG&show_icons=true&theme=radical" alt="" />
+<img  style={{marginTop:"70px",width:"40%",marginLeft:"27%"}} src="https://github-readme-stats.vercel.app/api/top-langs/?username=AFORANURAG&layout=compact" alt="" />
 
 </div>
     
