@@ -5,10 +5,8 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg5 from "../assets/img/project-img5.png";
 
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element} from 'react-scroll'
 
 export const Projects = () => {
 
@@ -116,175 +114,15 @@ export const Projects = () => {
 
   return (
     <Element name="Project" >
+    <div className="project1">
+<div className="right">
+</div>
+<div className="left">
+{projects.description}
+</div>
     
-    <section  className="project" id="Projects">
-    <Container>
-      <Row>
-        <Col size={20}>
-          <TrackVisibility>
-            {({ isVisible }) =>
-            <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-              <h2>Projects</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              <Tab.Container  id="projects-tabs" defaultActiveKey="first">
-                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                  <Nav.Item>
-                    <Nav.Link eventKey="first">Project 1</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">Project 2</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="third">Project 3</Nav.Link>
-                  </Nav.Item>
-                 
-
-                </Nav>
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" >
-              <Nav.Item>
-              <Nav.Link style={{border:"1px solid #EDEADE"}}  eventKey="fourth">Project 4</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-            <Nav.Link style={{border:"1px solid #EDEADE"}} eventKey="fifth">Project 5</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-
-          <Nav.Link style={{border:"1px solid #EDEADE"}} eventKey="sixth">Project 6</Nav.Link>
-        </Nav.Item>
-              
-              </Nav>  
-                <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                  <Tab.Pane eventKey="first">
-                    <Row>
-                      {
-                        projects.map((project, index) => {
-                          return (
-                            <IndividualProject
-                              key={index}
-                              {...project}
-                              href={project.href}
-github={project.github}
-                              />
-                          )
-                        })
-                      }
-                    </Row>
-                  </Tab.Pane>
-                 
-
-                  <Tab.Pane eventKey={"second"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                  <Row>
-                  {
-                    project1.map((project, index) => {
-                      return (
-                        <IndividualProject
-                          key={index}
-                          {...project}
-                          href={project.href}
-                          github={project.github}
-
-                          />
-                      )
-                    })
-                  }
-                </Row>
-                    </Tab.Pane>
-
-
-                  <Tab.Pane eventKey={"third"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                  <Row>
-                  {
-                    project2.map((project, index) => {
-                      return (
-                        <IndividualProject
-                          key={index}
-                          {...project}
-                          href={project.href}
-                          github={project.github}
-
-                          />
-                      )
-                    })
-                  }
-                </Row>
-
-                    </Tab.Pane>
-                    <Tab.Pane eventKey={"fourth"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Row>
-                    {
-                      project3.map((project, index) => {
-                        return (
-                          <IndividualProject
-                            key={index}
-                            {...project}
-                            href={project.href}
-                            github={project.github}
-  
-                            />
-                        )
-                      })
-                    }
-                  </Row>
-                      </Tab.Pane>
-
-                      <Tab.Pane eventKey={"fifth"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Row>
-                      {
-                        project4.map((project, index) => {
-                          return (
-                            <IndividualProject
-                              key={index}
-                              {...project}
-                              href={project.href}
-                              github={project.github}
-    
-                              />
-                          )
-                        })
-                      }
-                    </Row>
-                        </Tab.Pane>
-
-                        <Tab.Pane eventKey={"sixth"} id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                        <Row>
-                        {
-                          project5.map((project, index) => {
-                            return (
-                              <IndividualProject
-                                key={index}
-                                {...project}
-                                href={project.href}
-                                github={project.github}
-      
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                          </Tab.Pane>
-
-
-                </Tab.Content>
-              </Tab.Container>
-            </div>}
-          </TrackVisibility>
-        </Col>
-      </Row>
-    </Container>
-    <img className="background-image-right" src={colorSharp2}></img>
-  </section>
-    
+    </div>  
     </Element>
    
   )
 }
-// {
-//   title: "Business Startup",
-//   description: "Design & Development",
-//   imgUrl: projImg2,
-// },
-// {
-//   title: "Business Startup",
-//   description: "Design & Development",
-//   imgUrl: projImg3,
-// },

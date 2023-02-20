@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import React, { Component } from 'react'
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -52,26 +54,20 @@ export const Homepage = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+             
+              <div>
                 <span className="tagline">I Trust You Are In Your Best Health</span>
                 <h1>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p style={{color:"white"}}>A Profiecient Full Stack Developer Passionate In Developing And Working on some of the coolest Project. Looking forwards to work in a supportive and collaborative environment </p>
-
-
-              </div>}
+              </div>
             </TrackVisibility>
 
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={"https://i.ibb.co/KF65FcH/Anurag-Upadhyay-logo.png"} style={{borderRadius:"20%"}} alt="Header Img"/>
-              
-
-                  </div>}
-            </TrackVisibility>
+          <div >
+      <img className="myimg" src={"https://i.ibb.co/KF65FcH/Anurag-Upadhyay-logo.png"} style={{borderRadius:"20%"}} alt="Header Img"/>
+      </div>
+          
           </Col>
         </Row>
       </Container>

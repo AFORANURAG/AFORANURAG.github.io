@@ -262,31 +262,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 /******************** About me Css **************88*/
-.classofaboutme{
+.achivmentssummary{
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+  /* border-radius: 1px solid; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
-width: 83%;
+.classofaboutme{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 50%;
 border: 1px solid black;
 height: 230px;
 margin-top: 50px;
+margin-left: 3%;
+/* margin-right: -200px; */
 }
 .aboutme{
   background-image: url("./assets/img/pexels-pixabay-36717.jpg");
 }
 .infogrid{
   width: 100%;
-  display: grid;
-  grid-template-columns:repeat(2,1fr);
-  grid-template-rows: repeat(1,1fr);
 }
 .aboutmeinfo{
-  border: 1px solid black;
 height: max-content;
+font-family: 'Noto Serif', serif;
 color: black;
 text-align: center;
 margin-top: 50px;
-width: 60%;
+width: 55%;
+font-size: 20px;
+margin-left: 40%;
+box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
-
 .masaischoolstats{
   margin: 50px;
   display: grid;
@@ -296,8 +303,62 @@ row-gap: 10px;
 column-gap: 20px;
 }
 .innerdiv{
-  border: 1px solid black;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding-top:70px ;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 762px) and (max-width: 1208px) { 
+  .aboutmeinfo{
+    width:fit-content;
+    margin-right: "100px";
+    margin-left: 0%;
+    }
+    .classofaboutme{
+      width: fit-content;
+      /* margin-bottom:"100px"; */
+      margin-left: 4%;
+      
+    }
+
+
+}
+@media (max-width:762px){
+.codingkrtahuacoder{
+ height: 150px;   
+width: max-content;
+}
+.aboutmeinfo{
+width:fit-content;
+margin-right: "100px";
+margin-left: 0%;
+}
+.classofaboutme{
+  width: fit-content;
+  margin-bottom:"100px";
+  margin-left: 0%;
+}
+.achivement{
+  position: relative;
+  bottom: 30px;
+}
+.achivmentssummary{
+  position: relative;
+  bottom: 50px; 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+.masaischoolstats{
+  position: relative;
+  bottom: 50px; 
+}
+.masaischoolstats{
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(6,1fr);
+  row-gap: 30px;
+}
 }
 /*  about me section*/
 
@@ -353,9 +414,12 @@ column-gap: 20px;
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
-  animation: updown 3s linear infinite;
+.myimg{
+  width: 90%;
+  margin-top: 40px;
+  margin-left:20px;
 }
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -376,184 +440,78 @@ column-gap: 20px;
   padding: 0 0 50px 0;
   position: relative;
   background-image: url('./assets/img/pexels-alex-andrews-816608.jpg');
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
+  height: auto;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
 }
-.skill h2 {
-	font-size: 45px;
-	font-weight: 700;
-}
-.skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
-}
-.skill-slider {
+.skills{
   width: 80%;
-  margin: 0 auto;
-  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(5,auto);
+  row-gap: 30px;
+  column-gap: 20px;
+  text-align: center;
 }
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+.techimage{
+  width:40%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
-.background-image-left {
-  /* background-image: url(); */
+.techskill{
+  border: 1px solid white;
+  display: grid;
+  text-align: center;
+}
 
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
+@media (max-width:567px){
+  .skills{
+    grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(15,auto);
+  row-gap: 30px;
+  column-gap: 20px;
+  }
 
+}
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
   
-  background-color: black;
+  background-color: white !important;
 }
-.project h2 {
-	font-size: 45px;
-	font-weight: 700;
-  text-align: center;
+.project1{
+  display: flex;
+ 
+height: 500px;
+  border: 1px solid white;
 }
-.project p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
+
+.project1>div{
+border: 1px solid white !important;
+
 }
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
-}
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
-}
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
+.right{
+background-color: black;
   width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
+  /* position: relative; */
   z-index: 0;
+  opacity: 0.5;
+margin-left: 100px;
 }
-.project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, yellow 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* transition: 2s ease-in-out; */
-}
-.project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
-}
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
-}
-.proj-imgbx {
+.left{
+ width: 100%;
   position: relative;
-  border-radius: 30px;
-  /* overflow: hidden; */
-  width: 100%;
-  margin-bottom: 100px;
-  height: 500px;
+left: auto;
+  background-color:white;
+  opacity: 0.4;
+  border: 5px solid white;
+  left: -100px;
+  z-index: 1;
+  margin-right: 100px;
+  color: white;
 }
-.projectimage{
-  height: 500px;
-
-}
-.proj-imgbx::before {
-  content: "";
-  background-image: linear-gradient(to top right, red, yellow)
-;  /* background-image: linear-gradient(-45.21deg, white -5.91%, orange 111.58%); */
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 2s ease-in;
-
-}
-.proj-imgbx:hover::before {
- 
-  height: 100%;
-}
-
-.proj-txtx {
-  position: absolute;
-  
-  top: 125%;
- 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 2s ease-in-out;
-  opacity: 1;
-  background-color: black;
-  width: 100%;
-  padding-left: 5%;
-}
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, brown -5.91%,black 111.58%);

@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/Orion_github.svg';
 import { HashLink } from 'react-router-hash-link';
 import { Link as link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -11,21 +8,15 @@ import "../App.css"
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
+
   HStack,
   Link,
   IconButton,
-  Button,
   Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
+
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -38,15 +29,16 @@ const Links = ['Home', 'Projects', 'Skills',"Contact Me","My Blogs"];
 const NavLink1 = ({ children }) => (
   <Link
     // px={2}
-   w={100 }
+   w={100}
     color={"white"}
     py={1}
+    // ml={"100px"}
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
       bg: useColorModeValue('white', 'white'),
     }}
-    href="/"
+    href="#aboutme"
     >
     {children}
   </Link>
@@ -103,9 +95,10 @@ const NavLink5 = ({ children }) => (
 
 const NavLink4 = ({ children }) => (
   <Link
-    px={2} 
+    px={2}
+    ml={20} 
     color={"white"}
-    w={130}
+    w={120}
     py={1}
     rounded={'md'}
     _hover={{
@@ -140,7 +133,6 @@ const NavLink = ({ children }) => (
 export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
  
@@ -170,7 +162,6 @@ console.log("downloading is started")
     }
   };
 
-
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -184,9 +175,7 @@ console.log("downloading is started")
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  }
+
   const capitalizer=(string)=>{
     let something=string.charAt(0).toLowerCase()
   let string1=something
@@ -204,13 +193,17 @@ string1+=string[i]
       <Flex h={"100px"}  alignContent={"center"} alignItems={'center'} justifyContent={'space-between'} >
         <IconButton
           size={'md'}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? <>
+            <img src="https://img.icons8.com/ios/50/null/close-window--v1.png" alt="closeicon"/>
+            </> :<>
+            <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/48/null/external-hamburger-menu-bar-with-parallel-navigation-button-basic-regular-tal-revivo.png" alt="HamburgerIcon"/>
+          </>}
           aria-label={'Open Menu'}
           display={{ md: 'none' }}
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={'center'}>
-          <Box width={["25%","20%","10%"]} ml={["10%","10%","0px"]} marginTop={"12px"} mb={["15px"]}  color={"white"}>
+          <Box width={["25%","20%","10%"]}   color={"white"}>
          
           </Box>
           <HStack className={"hello"}
@@ -222,10 +215,7 @@ string1+=string[i]
 <NavLink3>Skills </NavLink3>
 <NavLink2>Projects </NavLink2>
 <NavLink4>Contact Me</NavLink4>
-  
-           
-           
-            <button disabled={isDownloading} style={{width:"200px "}} onClick={handleClick} >
+<button disabled={isDownloading} style={{width:"200px",marginLeft:"-20px"}}  onClick={handleClick} >
             <NavLink key={"73892472"}   className={"nav-link resume"} >{isDownloading ? 'Downloading...' : 'Download Resume'}</NavLink>  
             
           </button>
@@ -244,21 +234,25 @@ string1+=string[i]
         <HashLink to='#connect'>
         </HashLink>
       </span> 
-        
-         
+
           </Menu>
         </Flex>
         
       </Flex>
 
       {isOpen ? (
-        <Box pb={4} display={{ md: 'none' }} bg={"blackAlpha.500"}  >
+        <Box pb={4} display={{ md: 'none' }} bg={"blackAlpha.700"}  >
           <Stack as={'nav'} spacing={4}>
             {Links.map((link) => (
               <NavLink key={link}  className={`nav-link ${capitalizer(link)} }`} activeClass="active" to={link} spy={true} smooth={true} offset={50} duration={500} >{link}</NavLink>
             ))}
+            <button disabled={isDownloading} style={{width:"200px",marginLeft:"-22px"}}  onClick={handleClick} >
+          <NavLink key={"73892472"}   className={"nav-link resume"} >{isDownloading ? 'Downloading...' : 'Download Resume'}</NavLink>  
+          
+        </button>
           </Stack>
-        
+          
+
         </Box>
       ) : null}
 
@@ -279,32 +273,3 @@ string1+=string[i]
 
 
 
-
-
-          //   <Navbar id="nav-menu" expand="md" className={scrolled ? "scrolled" : ""}>
-          //   <Container>
-          //     <Navbar.Brand href="/">
-          //     <img style={{width:"100px"}} src="https://iili.io/H7Fl0pp.jpg" alt="Anurag-Upadhyay-logo" border="0"/>
-          //     </Navbar.Brand>
-          //     <Navbar.Toggle aria-controls="basic-navbar-nav">
-          //       <span className="navbar-toggler-icon"></span>
-          //     </Navbar.Toggle>
-          //     <Navbar.Collapse id="basic-navbar-nav">
-          //       <Nav className="ms-auto">
-          //         <Nav.Link href="#home"  className={activeLink === 'home' ? 'active navbar-link' : 'nav-link home'} id="Home" onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-          //         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'nav-link skills'} id="Skill" onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-          //         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'nav-link projects'} id="Project" onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-          //         <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'nav-link contact'} id="Contact" onClick={() => onUpdateActiveLink('contact')}>Contact Me</Nav.Link>            
-          //       </Nav>
-                
-          //     </Navbar.Collapse>
-          //   </Container>
-          // </Navbar>
-        //   <Button
-        //   variant={'solid'}
-        //   colorScheme={'teal'}
-        //   size={'sm'}
-        //   mr={4}
-        //   leftIcon={<AddIcon />}>
-          
-        // </Button>
