@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4663b4ca.css",
-    "main.js": "/static/js/main.817a0c1c.js",
+    "main.css": "/static/css/main.67758397.css",
+    "main.js": "/static/js/main.12233db6.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/project-img1.png": "/static/media/project-img1.196c3a737866391e67b9.png",
     "static/media/project-img2.png": "/static/media/project-img2.d62a4ca4b5bdcc38fa97.png",
@@ -12,6 +12,7 @@
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/icons8-github-94.png": "/static/media/icons8-github-94.7acde23236a5c7507398.png",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/react-2.svg": "/static/media/react-2.f5409fbdda4614275dc95e167902dab6.svg",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
@@ -21,24 +22,25 @@
     "static/media/icons8-redis.svg": "/static/media/icons8-redis.2f167e928ab70851aeea22818f4daed0.svg",
     "static/media/icons8-javascript.svg": "/static/media/icons8-javascript.aa17b7a345ae93056a398bba0f01b50c.svg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/icons8-github.svg": "/static/media/icons8-github.5288b5a2ee0adf6d0d34f8a6d80e792c.svg",
     "static/media/nodejs-1.svg": "/static/media/nodejs-1.e605cb5828b5744952b567458683f3b2.svg",
     "static/media/Orion_github.svg": "/static/media/Orion_github.e19e92b9e79d2fb1d099a52361bf1edc.svg",
     "static/media/icons8-docker.svg": "/static/media/icons8-docker.42acaea495f385e223fa81adf649a08c.svg",
     "static/media/express-109.svg": "/static/media/express-109.896b76a1c8577e061da2fd09d63f5c4d.svg",
     "static/media/icons8-mongodb.svg": "/static/media/icons8-mongodb.389aa18a9b02da23f02b77ddfc9d12be.svg",
+    "index.html": "/index.html",
     "static/media/nav-icon1.svg": "/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/icons8-bootstrap.svg": "/static/media/icons8-bootstrap.99ff40c99633dbe9199a405ec4ff4f65.svg",
-    "index.html": "/index.html",
     "static/media/icons8-typescript.svg": "/static/media/icons8-typescript.ced98752566ac4b3a366e8e41677cd67.svg",
     "static/media/icons8-css3.svg": "/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-chakra-ui.svg": "/static/media/icons8-chakra-ui.ae2406588649c3be92aa29c03cc8cc17.svg",
     "static/media/icons8-html-5.svg": "/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
-    "main.4663b4ca.css.map": "/static/css/main.4663b4ca.css.map",
-    "main.817a0c1c.js.map": "/static/js/main.817a0c1c.js.map",
+    "main.67758397.css.map": "/static/css/main.67758397.css.map",
+    "main.12233db6.js.map": "/static/js/main.12233db6.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4663b4ca.css",
-    "static/js/main.817a0c1c.js"
+    "static/css/main.67758397.css",
+    "static/js/main.12233db6.js"
   ]
 }
