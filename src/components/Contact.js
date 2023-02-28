@@ -5,6 +5,7 @@ import { Heading } from '@chakra-ui/react'
 import TrackVisibility from 'react-on-screen';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon3 from '../assets/img/Orion_github.svg';
+//874 990 pixels
 export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
@@ -46,8 +47,6 @@ export const Contact = () => {
 
   function redirector(e){
     console.log(e.target.id)
-    let selectedlinkedin=document.getElementById("linkedin")
-    let selectedgithub=document.getElementById("github")
 if(e.target.id==="linkedin"){
 window.location.href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"
   
@@ -67,10 +66,10 @@ window.location.href="https://github.com/AFORANURAG"
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-          <div className="social-icon" style={{position:"relative",right:"27%" ,top:"-20%",marginBottom:"200px"}}>
+          <div className="social-icon">
           <a href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"><img src={navIcon1} alt="" /></a>
          
-          <label className="contactsbottom" onClick={redirector} id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>
+          <label className="contactsbottom"  id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>
           Linkedin
           </label>
           <br />  
@@ -100,7 +99,7 @@ window.location.href="https://github.com/AFORANURAG"
 
             <TrackVisibility>
             {({ isVisible }) =>
-                            <img style={{marginTop:"-180px"}} className={isVisible ? "animate__animated animate__zoomIn" : ""} src={"https://media1.giphy.com/media/4Xp5iQo8Iqnfi/giphy.gif?cid=ecf05e47fjdg3pdxckw4t38snanmfocml82fbll1r04gsr06&rid=giphy.gif&ct=g"} alt="Contact Us"/>
+                            <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={"https://media1.giphy.com/media/4Xp5iQo8Iqnfi/giphy.gif?cid=ecf05e47fjdg3pdxckw4t38snanmfocml82fbll1r04gsr06&rid=giphy.gif&ct=g"} alt="Contact Us"/>
                           }
             </TrackVisibility>
           </Col>

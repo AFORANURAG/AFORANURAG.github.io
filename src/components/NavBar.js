@@ -140,7 +140,7 @@ export const NavBar = () => {
     setIsDownloading(true);
 console.log("downloading is started")
     try {
-      const response = await fetch("Anurag_Upadhyay_Resume.pdf");
+      const response = await fetch("fw21_0957-Anurag-Upadhyay-Resume.pdf");
       const blob = await response.blob();
       console.log(blob)
       const url = window.URL.createObjectURL(blob);
@@ -149,10 +149,10 @@ console.log("downloading is started")
       a.style.display = 'none';
       a.href = url;
       a.target="_blank";
-      a.download = 'Anurag_Upadhyay_Resume.pdf';
+      a.download = 'fw21_0957-Anurag-Upadhyay-Resume.pdf';
       document.body.appendChild(a);
       a.click();
-      window.open("https://drive.google.com/file/d/1fdbfxIDhZaaLpkybY-pyVMJteHi0oHu4/view?usp=sharing","_blank")
+      window.open("https://drive.google.com/file/d/127bV394x7UnI-a9Svyz7F9ZYTxMTash6/view?usp=sharing","_blank")
   
       // URL.revokeObjectURL(url);
     } catch (err) {
@@ -189,15 +189,15 @@ string1+=string[i]
   return (
     <>
     <Router>
-    <Box color={"white"}  height={"100px"} bg={useColorModeValue('white.1000', 'white.100')}  backgroundColor={scrolled?"black":"white.1000"}   zIndex={1} top={0} style={{position:"sticky"}} px={4} marginTop={"20px"}>
+    <Box color={"white"}  height={"100px"} bg={useColorModeValue('white.1000', 'white.100')}  backgroundColor={scrolled?"blackAlpha.700":"white.1000"}   zIndex={1} top={0} style={{position:"sticky"}} px={4} marginTop={"20px"}>
       <Flex h={"100px"}  alignContent={"center"} alignItems={'center'} justifyContent={'space-between'} >
         <IconButton
-          size={'md'}
+          size={'sm'}
           icon={isOpen ? <>
-            <img src="https://img.icons8.com/ios/50/null/close-window--v1.png" alt="closeicon"/>
+            <img src="https://img.icons8.com/ios/24/null/close-window--v1.png" alt="close icon"/>
             </> :<>
-            <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/48/null/external-hamburger-menu-bar-with-parallel-navigation-button-basic-regular-tal-revivo.png" alt="HamburgerIcon"/>
-          </>}
+            <img src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/null/external-hamburger-menu-bar-with-parallel-navigation-button-basic-light-tal-revivo.png" alt="hamburger icon"/>
+            </>}
           aria-label={'Open Menu'}
           display={{ md: 'none' }}
           onClick={isOpen ? onClose : onOpen}
@@ -227,9 +227,9 @@ string1+=string[i]
          
           <Menu>
           <span className="navbar-text">
-        <div className="social-icon">
-          <a href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"><img src={navIcon1} alt="" /></a>
-          <a href="https://github.com/AFORANURAG"><img color={"white"} src={navIcon3} alt="" /></a>
+        <div className="social-icon" style={{marginTop:"80px"}}>
+          <a style={{marginTop:"20px"}} href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"><img src={navIcon1} alt="" /></a>
+          <a style={{marginTop:"20px"}} href="https://github.com/AFORANURAG"><img color={"white"} src={navIcon3} alt="" /></a>
         </div>
         <HashLink to='#connect'>
         </HashLink>
