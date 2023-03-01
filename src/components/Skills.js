@@ -15,15 +15,38 @@ import bootstrap from "../assets/img/icons8-bootstrap.svg"
 import chakraui from "../assets/img/icons8-chakra-ui.svg"
 import mongodb from "../assets/img/icons8-mongodb.svg"
 import docker from "../assets/img/icons8-docker.svg"
+import React, { useEffect, useRef } from 'react';
+
 
 // import mysql from '../assets/img/express-109.svg';
 
 
 export const Skills = () => {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elementRef.current) {
+        const top = elementRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.8) { // trigger animation when element is 80% in view
+          elementRef.current.style.opacity = 1;
+         
+        } else {
+          elementRef.current.style.opacity = 0;
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
 
   return (
-    <section  className="skill" id="Skills">
-    <h1 style={{color:"white",fontSize:"30px",marginTop:"50px",marginBottom:"30px"}}>Skills</h1>
+    <section ref={elementRef} style={{ opacity: 0, transition: 'opacity 2s' }} className="skill" id="Skills">
+    <h1 style={{color:"white",fontFamily:"cursive",fontSize:"35px",marginTop:"50px",marginBottom:"30px"}}>Skills</h1>
 
     <div className='skills' >
        <div className="techskill">

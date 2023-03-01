@@ -15,6 +15,8 @@ export const Homepage = () => {
   const toRotate = [ "A Full Stack Web Developer",];
   const period = 2000;
 
+
+  
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
@@ -22,6 +24,7 @@ export const Homepage = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
+
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -49,16 +52,16 @@ export const Homepage = () => {
   }
 
   return (
-    <section className="banner" id="home" style={{marginTop:"-150px"}} >
+    <section className="banner" id="home" style={{marginTop:"-130px"}} >
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-             
+            
               <div>
                 <span className="tagline">I Trust You Are In Your Best Health</span>
-                <h1>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p style={{color:"white"}}>A Profiecient Full Stack Developer Passionate In Developing And Working on some of the coolest Project. Looking forwards to work in a supportive and collaborative environment </p>
+                <h1 style={{fontSize:"50px",marginTop:"50px",lineHeight:"70px"}}>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p style={{color:"white",fontFamily:"Noto-serif",fontSize:"20px",marginTop:"50px"}}>A Profiecient Full Stack Developer Passionate In Developing And Working on some of the coolest Project. Looking forwards to work in a supportive and collaborative environment </p>
               </div>
             </TrackVisibility>
 

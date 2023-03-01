@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "framer-motion": "^8.3.3",
+    "gsap": "^3.11.4",
     "nodemailer": "^6.7.5",
     "react": "^18.1.0",
     "react-background-animation": "^1.0.1",
@@ -32,6 +33,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
+    "scrollmagic": "^2.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

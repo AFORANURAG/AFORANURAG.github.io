@@ -17,16 +17,17 @@ export const IndividualProject= ({ project1}) => {
 
 
 <div className="techstack">
-
 {project1[0]?.TechStack?.map((el)=>{
 return (
-
-<img className="skillsused" src={el} alt="" /> 
-
+ <>
+ <div className="containerdiv">
+ <img  className="skillsused" src={el.img} alt="" />
+ <span style={{color:"white",fontSize:"25px",fontFamily:"Noto-serif"}}>{el.name}</span>
+ </div>
+ 
+ </> 
 )
-
 })}
-
 </div>
 
 <Center>
@@ -35,38 +36,29 @@ return (
   Github <ExternalLinkIcon mx='2px' />
 </Link>
 
-
 <div style={{width:"3px",height:"30px",color:"white",border:"1px solid white",margin:"10px"}}></div>
 <img src={netlify} style={{width:"8%",position:"relative"}} alt="" />  
 
 <Link href={project1[0].href} color={"white"} isExternal>
 {project1[0].title}  <ExternalLinkIcon mx='2px' />
 </Link>
-
 </Center>
-
-
 </div>
-
-
 <div className="left">
-   
-     <h1 style={{marginTop:"5%",fontFamily:'Noto Serif',fontSize:"26px",lineHeight:"30px",color:"white"}}>Description</h1>
-<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px", fontFamily:'Noto Serif',fontSize:"20px",lineHeight:"30px",color:"white"}}>
+<h1 style={{marginTop:"5%",fontFamily:'cursive',fontSize:"26px",lineHeight:"30px",color:"white"}}>{project1[0].Name}</h1>
+<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px", fontFamily:'Noto Serif',fontSize:"18px",lineHeight:"30px",color:"white"}}>
 {project1[0].description}
 </p>
-<h1 style={{marginTop:"5%",fontFamily:'Noto Serif',fontSize:"22px",lineHeight:"30px",color:"white"}}>Areas Of Responsibility</h1>
-<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",fontFamily:'Noto Serif',fontSize:"20px",lineHeight:"30px",color:"white"}}>
+<h1 style={{marginTop:"5%",fontFamily:'cursive',fontSize:"22px",lineHeight:"30px",color:"white"}}>Areas Of Responsibility</h1>
+<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",fontFamily:'Noto Serif',fontSize:"18px",lineHeight:"30px",color:"white"}}>
 {project1[0].AreasOfResponsibility}
 </p>
-<h1 style={{marginTop:"5%",fontFamily:'Noto Serif',fontSize:"22px",lineHeight:"30px",color:"white"}}>Project Type</h1>
-<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",fontFamily:'Noto Serif',fontSize:"20px",lineHeight:"30px",color:"white"}}>
+<h1 style={{marginTop:"5%",fontFamily:'cursive',fontSize:"22px",lineHeight:"30px",color:"white"}}>Project Type</h1>
+<p style={{marginTop:"7%",boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",fontFamily:'Noto Serif',fontSize:"18px",lineHeight:"30px",color:"white"}}>
 {project1[0].ProjectType}
 </p>
-
-    </div>
-        
-        </div> 
+</div>
+</div> 
     </Col>
   )
 }

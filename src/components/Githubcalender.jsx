@@ -14,15 +14,15 @@ import GitHubCalendar from 'react-github-calendar';
             window.removeEventListener('resize', handleResize);
           };
         }, []);
-      
         return (
-          <div  className="calendar-container" style={{ width: '100%' }}>
-            <GitHubCalendar
+          <div  className="calendar-container" style={{color:"black", width: '90%' }}>
+          <GitHubCalendar
               username="aforanurag"
-              blockSize={windowWidth < 800 ? 30 : 12}
-              blockMargin={windowWidth < 800 ? 6 : 6   }
-              
-            />
+              blockSize={windowWidth>450&&windowWidth<800?25 : 25}
+              blockMargin={windowWidth>450&&windowWidth < 800 ?   5 : 5 }
+              color={"green"}
+              fontSize={windowWidth < 540? 15:30 }
+              />
           </div>
         );
       }
