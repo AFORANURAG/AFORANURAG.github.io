@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c2a7e83.css",
-    "main.js": "/static/js/main.ce5d7342.js",
+    "main.css": "/static/css/main.ab2e3eab.css",
+    "main.js": "/static/js/main.0309ed86.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/project-img1.png": "/static/media/project-img1.196c3a737866391e67b9.png",
     "static/media/pexels-pixabay-36717.jpg": "/static/media/pexels-pixabay-36717.8b75482e156f56591920.jpg",
@@ -29,6 +29,7 @@
     "static/media/icons8-docker.svg": "/static/media/icons8-docker.42acaea495f385e223fa81adf649a08c.svg",
     "static/media/express-109.svg": "/static/media/express-109.896b76a1c8577e061da2fd09d63f5c4d.svg",
     "static/media/icons8-mongodb.svg": "/static/media/icons8-mongodb.389aa18a9b02da23f02b77ddfc9d12be.svg",
+    "static/media/icons8-javascript (1).svg": "/static/media/icons8-javascript (1).19600440c8c62e3de974e2bba991871f.svg",
     "index.html": "/index.html",
     "static/media/nav-icon1.svg": "/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/icons8-bootstrap.svg": "/static/media/icons8-bootstrap.99ff40c99633dbe9199a405ec4ff4f65.svg",
@@ -36,12 +37,12 @@
     "static/media/icons8-css3.svg": "/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-chakra-ui.svg": "/static/media/icons8-chakra-ui.ae2406588649c3be92aa29c03cc8cc17.svg",
     "static/media/icons8-html-5.svg": "/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
-    "main.2c2a7e83.css.map": "/static/css/main.2c2a7e83.css.map",
-    "main.ce5d7342.js.map": "/static/js/main.ce5d7342.js.map",
+    "main.ab2e3eab.css.map": "/static/css/main.ab2e3eab.css.map",
+    "main.0309ed86.js.map": "/static/js/main.0309ed86.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c2a7e83.css",
-    "static/js/main.ce5d7342.js"
+    "static/css/main.ab2e3eab.css",
+    "static/js/main.0309ed86.js"
   ]
 }
