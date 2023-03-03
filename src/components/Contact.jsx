@@ -73,9 +73,7 @@ window.location.href="https://github.com/AFORANURAG"
     Contact Me
     </h1>
     </div>
-    
- 
-      <Container>
+    ex<Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
           {width>600?<>

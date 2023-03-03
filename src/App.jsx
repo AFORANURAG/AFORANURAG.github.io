@@ -10,21 +10,36 @@ import { Footer } from "./components/Footer";
 import { ChakraProvider } from '@chakra-ui/react'
 import Githubstats from './components/Githubstats';
 import Aboutme from './components/Aboutme';
+import Loader from "./components/Loader"
+import { useEffect, useState } from 'react';
 function App() {
+  const [loading,isLoading] = useState(true);
+useEffect(()=>{
+setInterval(()=>{
+isLoading(false);
+},2000)
+
+},[])
+
   return (
     <ChakraProvider>
+{loading?<>
+<Loader/>  
+</>:
+<>
+<div className="App">
+<NavBar />
+<Homepage />
+<Aboutme/>
 
-    <div className="App">
-    <NavBar />
-    <Homepage />
-    <Aboutme/>
-    
-    <Skills />
-    <Projects />
-    <Githubstats/>
-    <Contact />
-    <Footer />
-  </div>
+<Skills />
+<Projects />
+<Githubstats/>
+<Contact />
+<Footer />
+</div>
+</>}
+   
 
 
 </ChakraProvider>

@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import {Canvas} from "@react-three/fiber"
+import Box from "./Box";
 import React, { Component } from 'react'
+import {OrbitControls} from "@react-three/drei"
+import { Suspense } from 'react'
+// import 'animate.css';
+
 
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -57,19 +63,25 @@ export const Homepage = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-            
               <div>
-                <span className="tagline">I Trust You Are In Your Best Health</span>
-                <h1 style={{fontSize:"50px",marginTop:"50px",lineHeight:"70px"}}>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p style={{color:"white",fontFamily:"Noto-serif",fontSize:"20px",marginTop:"50px"}}>A Profiecient Full Stack Developer Passionate In Developing And Working on some of the coolest Project. Looking forwards to work in a supportive and collaborative environment </p>
-              </div>
+                <span className="tagline animate__animated animate__backInLeft" >I Trust You Are In Your Best Health</span>
+                <h1 className="animate__animated animate__backInDown" style={{fontSize:"50px",marginTop:"50px",lineHeight:"70px"}}>{`Hello! I'm Anurag`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Full Stack Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p style={{color:"white",fontFamily:"Noto-serif",fontSize:"20px",marginTop:"50px"}} className="animate__animated animate__backInUp">As a skilled full-stack developer, I bring a diverse range of technical skills and experience to every project I tackle. With expertise in Node.js, Express.js, AWS, React.js, MongoDB, MySQL, TypeScript, and Socket.io, I'm well-equipped to build robust, scalable, and efficient applications that meet the needs of clients across industries. </p>
+                  </div>
             </TrackVisibility>
-
           </Col>
           <Col xs={12} md={6} xl={5}>
           <div >
-      <img className="myimg" src={"https://i.ibb.co/KF65FcH/Anurag-Upadhyay-logo.png"} style={{borderRadius:"20%"}} alt="Header Img"/>
-      </div>
+          <Canvas className="animate__animated animate__backInRight"  style={{height:"500px"}}>
+          <OrbitControls enableZoom={false}/>
+          <ambientLight intensity={0.5}/>
+          <directionalLight position={[-2,5,2]} intensity={1}/>
+         <Suspense fallback={null}>
+         <Box/>
+         </Suspense>
+         
+          </Canvas>
+          </div>
           
           </Col>
         </Row>

@@ -27,10 +27,11 @@ import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 const Links = ["Home", "Projects", "Skills", "Contact Me", "My Blogs"];
 const NavLink1 = ({ children }) => (
   <Link
-    // px={2}
+    px={2}
     w={100}
     color={"white"}
     py={1}
+    // ml={20}
     // ml={"100px"}
     rounded={"md"}
     _hover={{
@@ -84,7 +85,7 @@ const NavLink5 = ({ children }) => (
       textDecoration: "none",
       bg: useColorModeValue("white", "white"),
     }}
-    // href="#Skills"
+    href="#home"
   >
     {children}
   </Link>
@@ -242,6 +243,7 @@ fontFamily={"cursive"}
                 <NavLink3>Skills </NavLink3>
                 <NavLink2>Projects </NavLink2>
                 <NavLink4>Contact Me</NavLink4>
+                
                 <button
                   disabled={isDownloading}
                   style={{ width: "200px", marginLeft: "-20px" }}
@@ -279,28 +281,19 @@ fontFamily={"cursive"}
           {isOpen ? (
             <Box pb={4} display={{ md: "none" }} bg={"blackAlpha.700"}>
               <Stack as={"nav"} spacing={4}>
-                {Links.map((link) => (
-                  <NavLink
-                    key={link}
-                    className={`nav-link ${capitalizer(link)} }`}
-                    activeClass="active"
-                    to={link}
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  >
-                    {link}
-                  </NavLink>
-                ))}
-                <button
-                  disabled={isDownloading}
-                  style={{ width: "200px", marginLeft: "-22px" }}
-                  onClick={handleClick}
-                >
-                  <NavLink key={"73892472"} className={"nav-link resume"}>
-                    {isDownloading ? "Downloading..." : "Download Resume"}
-                  </NavLink>
+              <NavLink5>Home </NavLink5>
+              <NavLink1>About Me </NavLink1>
+              <NavLink3>Skills </NavLink3>
+              <NavLink2>Projects </NavLink2>
+              <NavLink4>Contact Me</NavLink4>
+              <button
+                disabled={isDownloading}
+                style={{ width: "200px", marginLeft: "-20px" }}
+                onClick={handleClick}
+              >
+                <NavLink key={"73892472"} className={"nav-link resume"}>
+                  {isDownloading ? "Downloading..." : "Download Resume"}
+                </NavLink>
                 </button>
               </Stack>
             </Box>
