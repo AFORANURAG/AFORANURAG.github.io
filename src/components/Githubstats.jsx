@@ -1,12 +1,34 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useRef} from 'react'
 // import  {GitHubCalendar} from  "https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
 import GitHubCalendar from 'react-github-calendar';
 import Githubcalender from "./Githubcalender"
 // import {GitHubCalendar} from "github-calendar"
 
 export default function Githubstats() {
-  const [width,setwidth]=useState(window.innerWidth)
-  
+const [width,setwidth]=useState(window.innerWidth);
+// const [isVisible,setIsVisible]=useState(false);
+// console.log(isVisible);
+
+
+// const ref= useRef(null)
+// useEffect(()=>{
+// const observer = new IntersectionObserver(([entry])=>
+// setIsVisible(entry.isIntersecting),
+// {rootMargin:"-100px"}
+// )
+// if(ref.current){
+//   observer.observe(ref.current);
+// }
+// return ()=>{
+// if(ref.current){
+//   observer.observe(ref.current);
+// }
+// }
+// },[])
+
+
+
+
 const imagestyles={
 img:{
   marginTop:"70px",width:"55%",marginLeft:"22%",marginRight:"20%"
@@ -44,17 +66,35 @@ window.removeEventListener("resize",()=>{setwidth(window.innerWidth)})
  
   
     return (
-    <div id='githubsection' style={{position:"relative",top:"100px",marginTop:"100px",paddingTop:"100px",paddingBottom:"100px",background:"white"}}>
+    <div id='githubsection'  style={{position:"relative",top:"100px",marginTop:"100px",paddingTop:"100px",paddingBottom:"100px",background:"white"}}>
     <h1 style={{fontFamily:"cursive",textAlign:"center",marginBottom:"50px",color:"black",fontSize:"50px"}}> Github Stats</h1>
    <Githubcalender/>
    {width<900?<>
+    <div>
     <img className='githubstateimage' style={imagestyles.img2} src="http://github-readme-streak-stats.herokuapp.com?user=AFORANURAG&theme=dark&background=000000" alt="" />
+    </div>
+
+    <div>
     <img className='githubstateimage' style={imagestyles.img2} src="https://github-readme-stats.vercel.app/api?username=AFORANURAG&show_icons=true&theme=radical" alt="" />
- <img className='githubstateimage' style={imagestyles.img2} src="https://github-readme-stats.vercel.app/api/top-langs/?username=AFORANURAG&layout=compact" alt="" />
+    </div>
+
+    <div>
+    <img className='githubstateimage' style={imagestyles.img2} src="https://github-readme-stats.vercel.app/api/top-langs/?username=AFORANURAG&layout=compact" alt="" />
+    </div>
+
     </>:<>
+   <div>
    <img className='githubstateimage' style={imagestyles.img} src="http://github-readme-streak-stats.herokuapp.com?user=AFORANURAG&theme=dark&background=000000" alt="" />
+
+   </div>
+   <div>
    <img className='githubstateimage' style={imagestyles.img} src="https://github-readme-stats.vercel.app/api?username=AFORANURAG&show_icons=true&theme=radical" alt="" />
-<img className='githubstateimage' style={imagestyles.img} src="https://github-readme-stats.vercel.app/api/top-langs/?username=AFORANURAG&layout=compact" alt="" /> 
+
+   </div>
+   <div>
+   <img className='githubstateimage' style={imagestyles.img} src="https://github-readme-stats.vercel.app/api/top-langs/?username=AFORANURAG&layout=compact" alt="" /> 
+
+   </div>
    
    </>}
 

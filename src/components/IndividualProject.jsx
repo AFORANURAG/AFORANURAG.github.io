@@ -6,17 +6,35 @@ import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Divider,Center } from '@chakra-ui/react'
 // import { Divider } from '@chakra-ui/react'
+import {useState,useEffect,useRef} from "react";
 export const IndividualProject= ({ project1}) => {
-  console.log(project1)
+  const [isVisible,setIsVisible] = useState(false);
+  // console.log(isVisible )
+  const ref=useRef(null)
+  
+  useEffect(()=>{
+  let observer=new IntersectionObserver(([entry])=>
+  setIsVisible(entry.isIntersecting),
+  {rootMargin:"-100px"}
+  )
+  if(ref.current){
+    observer.observe(ref.current)
+  }
+  return ()=>{
+  if(ref.current){
+    observer.unobserve(ref.current)
+  }
+  } 
+  },[])
   return (
-    <Col size={22}  sm={9} md={7} style={{marginLeft:"20%"}} >
-    <div className="project1">
+    <Col size={22}  sm={9} md={7} style={{marginLeft:"20%"}}   >
+    <div className={isVisible?"project1 animate__animated animate__flipInY animate__slower":"project1"} ref={ref}>
     <div className="right">
 
     <img style={{height:"60%",marginTop:"10%"}} src={project1[0].imgUrl} alt="" />
 
 
-<div className="techstack">
+<div className="techstack" >
 {project1[0]?.TechStack?.map((el)=>{
 return (
  <>

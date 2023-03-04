@@ -11,7 +11,7 @@ import {
   scroller,
 } from "react-scroll";
 import "../App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router,Link as RouterLink } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -109,6 +109,26 @@ const NavLink4 = ({ children }) => (
   </Link>
 );
 
+const NavLinkforblogs = ({ children }) => (
+  <Link
+    px={2}
+    ml={20}
+    
+   
+    color={"white"}
+    w={120}
+    py={1}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      bg: useColorModeValue("white", "white"),
+    }}
+  href={"https://www.google.com"}
+  >
+    {children}
+  </Link>
+);
+
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -186,7 +206,7 @@ export const NavBar = () => {
   // console.log(answer)
   return (
     <>
-      <Router>
+     
         <Box
           color={"white"}
           height={"100px"}
@@ -243,17 +263,17 @@ fontFamily={"cursive"}
                 <NavLink3>Skills </NavLink3>
                 <NavLink2>Projects </NavLink2>
                 <NavLink4>Contact Me</NavLink4>
-                
                 <button
-                  disabled={isDownloading}
-                  style={{ width: "200px", marginLeft: "-20px" }}
-                  onClick={handleClick}
+                disabled={isDownloading}
+                style={{ width: "200px", marginLeft: "-20px" }}
+                onClick={handleClick}
                 >
-                  <NavLink key={"73892472"} className={"nav-link resume"}>
-                    {isDownloading ? "Downloading..." : "Download Resume"}
-                  </NavLink>
+                <NavLink key={"73892472"} className={"nav-link resume"}>
+                {isDownloading ? "Downloading..." : "Download Resume"}
+                </NavLink>
                 </button>
-              </HStack>
+                <NavLinkforblogs>Latest Blogs </NavLinkforblogs>
+                </HStack>
             </HStack>
             <Flex alignItems={"center"}>
               <Menu>
@@ -299,7 +319,7 @@ fontFamily={"cursive"}
             </Box>
           ) : null}
         </Box>
-      </Router>
+    
     </>
   );
 };

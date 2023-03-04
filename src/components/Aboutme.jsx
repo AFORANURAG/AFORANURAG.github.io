@@ -13,11 +13,11 @@ const ComponentToTrack = ({ }) => {
   const elementRef = useRef(null);
   const ref = useRef(null)
   const [isVisible, setIsVisible] = useState(false);
-console.log(isVisible)
+// console.log(isVisible)
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
-      { rootMargin: '-100px' } // adjust rootMargin as needed
+      { rootMargin: '-100px' } 
     );
 
     if (ref.current) {
@@ -55,10 +55,10 @@ console.log(isVisible)
       background: isVisible ? 'red' : 'blue'
   };
   return (
-    <Container ref={ref} className={ "aboutme"} id="aboutme" style={{width:"100%",marginTop:"50px",marginBottom:"100px",borderRadius:"3%",height:"auto",textAlign:"center"}}>
+    <Container ref={ref} className={ "aboutme"} id="aboutme" style={{width:"100%",marginTop:"150px",marginBottom:"100px",borderRadius:"3%",height:"auto",textAlign:"center"}}>
 
-    <h1 ref={ref} style={{color:"white",fontSize:"30px",fontFamily:"cursive",marginTop:"30px"}} classsName = {isVisible?" animate__animated animate__backInRight":""} > AboutMe</h1>
-<img className="codingkrtahuacoder" style={{width:"20%",marginRight:"40%", marginLeft:"40%",marginTop:"30px", borderRadius:"13%"}} src="https://media1.giphy.com/media/i1JHRZSXO9LZZDHqii/giphy.gif?cid=ecf05e47rxgz6titdcddtv1en3qd4c13frsxlrfns0arvkg2&rid=giphy.gif&ct=g" alt="" />
+    <h1 ref={ref} style={{color:"white",fontSize:"30px",fontFamily:"cursive",marginBottom:"100px"}} classsName = {isVisible?" animate__animated animate__backInRight":""} > AboutMe</h1>
+<img className={isVisible?"codingkrtahuacoder animate__animated animate__zoomInRight animate__slower":"codingkrtahuacoder"} style={{width:"20%",marginRight:"40%", marginLeft:"40%",marginTop:"30px", borderRadius:"13%"}} src="https://media1.giphy.com/media/i1JHRZSXO9LZZDHqii/giphy.gif?cid=ecf05e47rxgz6titdcddtv1en3qd4c13frsxlrfns0arvkg2&rid=giphy.gif&ct=g" alt="" />
 <div className = {isVisible?"aboutmeinfo animate__animated animate__backInRight animate__slower":"aboutmeinfo"} >
     Highly skilled Node.js developer with a passion for creating efficient and scalable backend solutions. Proficient  in developing
     robust and secure web applications using Node.js, Express and other related technologies. Proven track record of delivering successful 

@@ -19,11 +19,12 @@ import bootstrap from "../assets/img/icons8-bootstrap.svg"
 import chakraui from "../assets/img/icons8-chakra-ui.svg"
 import mongodb from "../assets/img/icons8-mongodb.svg"
 import docker from "../assets/img/icons8-docker.svg"
-
+import {React,useState,useEffect,useRef} from "react"
 import 'animate.css';
 import { Element} from 'react-scroll'
 
 export const Projects = () => {
+
 
   const projects = [
     
@@ -132,7 +133,7 @@ export const Projects = () => {
   return (
     <Element name="Project"  style={{padding:"10px"}} id="Projects" >
   <div style={{textAlign:"center",color:"whitesmoke"}}><h1 style={{fontFamily:"cursive",fontSize:"35px",marginTop:"30px"}}> My Projects</h1></div>
-     <IndividualProject project1={projects} />
+     <IndividualProject   project1={projects} />
      <IndividualProject project1={project1} />
      <IndividualProject project1={project2} />
      <IndividualProject project1={project5} />
