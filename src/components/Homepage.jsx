@@ -5,7 +5,9 @@ import {Canvas} from "@react-three/fiber"
 import Box from "./Box";
 import React, { Component } from 'react'
 import {OrbitControls} from "@react-three/drei"
-import { Suspense } from 'react'
+import { Suspense } from 'react';
+import myimage from "../assets/img/Anurag-Upadhyay-logo.png"
+import {Image} from "@chakra-ui/react";
 // import 'animate.css';
 
 
@@ -70,18 +72,12 @@ export const Homepage = () => {
                   </div>
             </TrackVisibility>
           </Col>
+        
           <Col xs={12} md={6} xl={5}>
-          <div >
-          <Canvas className="animate__animated animate__backInRight"  style={{height:"500px"}}>
-          <OrbitControls enableZoom={false}/>
-          <ambientLight intensity={0.5}/>
-          <directionalLight position={[-2,5,2]} intensity={1}/>
-         <Suspense fallback={null}>
-         <Box/>
-         </Suspense>
-         
-          </Canvas>
-          </div>
+          <TrackVisibility>
+          <Image className="tagline animate__animated animate__backInRight" w={"70%"} ml={10} mt={"100px"} borderRadius={"20px"} src={myimage} alt="" />
+
+          </TrackVisibility> 
           
           </Col>
         </Row>
