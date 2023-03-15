@@ -272,9 +272,8 @@ fontFamily={"cursive"}
                 {isDownloading ? "Downloading..." : "Download Resume"}
                 </NavLink>
                 </button>
-                <NavLinkforblogs>Latest Blogs </NavLinkforblogs>
                 </HStack>
-            </HStack>
+                </HStack>
             <Flex alignItems={"center"}>
               <Menu>
                 <span className="navbar-text">
@@ -323,3 +322,5 @@ fontFamily={"cursive"}
     </>
   );
 };
+
+// <NavLinkforblogs>Latest Blogs </NavLinkforblogs>

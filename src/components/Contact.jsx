@@ -57,7 +57,7 @@ export const Contact = () => {
   function redirector(e){
     console.log(e.target.id)
 if(e.target.id==="linkedin"){
-window.location.href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"
+window.location.href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239/"
   
 }else{
 window.location.href="https://github.com/AFORANURAG"
@@ -73,20 +73,18 @@ window.location.href="https://github.com/AFORANURAG"
     Contact Me
     </h1>
     </div>
-    ex<Container>
+    <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
           {width>600?<>
             <div className="social-icon">
             <a href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"><img src={navIcon1} alt="" /></a>
-           
-            <label className="contactsbottom"  id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>
+            <label className="contactsbottom" onClick={redirector} id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>
             Linkedin
             </label>
             <br />  
   
-            <a style={{position:"relative",marginTop:"20px"}} href="https://github.com/AFORANURAG"><img color={"white" } style={{position:"relative"}} src={navIcon3} alt="" /></a>
-            
+            <a style={{position:"relative",marginTop:"20px"}} href="https://github.com/AFORANURAG"><img color={"white" } style={{position:"relative"}} src={navIcon3} alt="" /></a>          
             <label className="contactsbottom" onClick={redirector}  id="github" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>  Github </label>
             <br />
             
@@ -111,9 +109,7 @@ window.location.href="https://github.com/AFORANURAG"
             <div style={{marginLeft:"20px",position:"relative",bottom:"100px"}} className="social-icon">
             <a href="https://www.linkedin.com/in/anurag-upadhyay-9676b5239"><img src={navIcon1} alt="" /></a>
            
-            <label className="contactsbottom"  id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>
-            Linkedin
-            </label>
+            <label  onClick={redirector} className="contactsbottom"  id="linkedin" htmlFor="" style={{fontSize:"25px",marginLeft:"20px"}}>Linkedin</label>
             <br />  
   
             <a style={{position:"relative",marginTop:"20px"}} href="https://github.com/AFORANURAG"><img color={"white" } style={{position:"relative"}} src={navIcon3} alt="" /></a>
